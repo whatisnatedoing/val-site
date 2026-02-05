@@ -1,0 +1,353 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sweet Valentine</title>
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" /> <!-- [web:43] -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="containerX pt-4 pt-sm-5">
+    <div class="d-flex align-items-center justify-content-between gap-3">
+      <a class="d-flex align-items-center gap-3" href="index.html">
+        <div class="glass d-grid place-items-center" style="width:44px;height:44px;">
+          <i class="bi bi-heart-fill" style="color: var(--burning);"></i>
+        </div>
+        <div class="lh-sm">
+          <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+            Happy Valentine
+          </div>
+          <div id="toName" style="font-weight:600; color: rgba(18,12,24,0.84);">My Senior Comrade</div>
+        </div>
+      </a>
+
+      <div class="d-none d-sm-flex align-items-center gap-2">
+        <a class="btnX" href="#letter"><i class="bi bi-envelope-heart"></i> Letter</a>
+        <a class="btnX" href="#memories"><i class="bi bi-clock-history"></i> Memories</a>
+        <a class="btnX" href="#gallery"><i class="bi bi-images"></i> Gallery</a>
+        <a class="btnX btnX-soft" href="#" id="goRevealBtnTop"><i class="bi bi-play-circle"></i> Reveal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main class="pb-5 pb-md-6">
+    <section class="containerX mt-4 mt-sm-5">
+      <div class="row g-4 g-lg-5 align-items-center">
+        <!-- Left -->
+        <div class="col-lg-6">
+          <div id="badgeRow" class="d-flex flex-wrap gap-2"></div>
+
+          <div class="mt-3" style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+            To <span id="toName2" style="color: rgba(18,12,24,0.86); font-weight:600;"></span>
+            · From <span id="fromName" style="color: rgba(18,12,24,0.86); font-weight:600;">Your Person</span>
+          </div>
+
+          <h1 id="heroHeadline" class="mt-3 mb-0 font-serif" style="font-size: clamp(44px, 5vw, 68px); letter-spacing:-0.02em;">
+            Sweet Valentine.
+          </h1>
+
+          <p id="heroSubhead" class="mt-3 mb-0" style="max-width: 42ch; color: var(--muted); font-size: 1.05rem; line-height: 1.7;">
+            A private mini experience—quiet, modern, and made for one person: you.
+          </p>
+
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a class="btnX btnX-primary" href="#letter"><i class="bi bi-envelope-open"></i> Open the letter</a>
+            <a class="btnX" href="#gallery"><i class="bi bi-images"></i> View gallery</a>
+            <a class="btnX btnX-soft" href="#" id="goRevealBtn"><i class="bi bi-lock"></i> Unlock reveal</a>
+          </div>
+
+          <p id="revealHint" class="mt-3 mb-0" style="font-size: 13px; color: rgba(18,12,24,0.55);">
+            Locked by a passcode (casual privacy).
+          </p>
+
+          <hr class="hr-soft mt-4 mb-0" />
+
+          <div class="row g-3 mt-1">
+            <div class="col-sm-4">
+              <div class="glass p-3">
+                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Tone</div>
+                <div class="mt-2" style="color: var(--muted);">Soft · modern · romantic</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="glass p-3">
+                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Story</div>
+                <div class="mt-2" style="color: var(--muted);">One scroll · one person</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="glass p-3">
+                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Reveal</div>
+                <div class="mt-2" style="color: var(--muted);">Video message</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right (hero media + floating cards) -->
+        <div class="col-lg-6">
+          <div class="glass-strong p-3 heroMedia">
+            <img src="assets/img/photo1.jpg" alt="Hero photo" />
+
+            <div class="floatingCard topRight glass p-3">
+              <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+                VAL'26
+              </div>
+              <div class="mt-2" style="color: rgba(18,12,24,0.82);">
+                For the Love of my Life.
+              </div>
+            </div>
+
+            <div class="floatingCard bottomLeft glass p-3">
+              <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+                Private
+              </div>
+              <div class="mt-2" style="color: rgba(18,12,24,0.82);">
+                Passcode needed for the reveal.
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 glass p-3 d-lg-none">
+            <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Tip</div>
+            <div class="mt-2" style="color: rgba(18,12,24,0.82);">
+              Replace the 6 photos in <code>assets/img</code> so it feels like *you two*.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" class="containerX mt-5 mt-md-6">
+      <div class="d-flex align-items-end justify-content-between flex-wrap gap-3">
+        <div>
+          <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+            A letter
+          </div>
+          <h2 id="letterHeadline" class="mt-2 font-serif" style="font-size: clamp(28px, 3.5vw, 42px);">
+            Open when you’re ready
+          </h2>
+          <p class="mt-2 mb-0" style="color: var(--muted);">Tap to open. Tap to close.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btnX" id="openLetterBtn"><i class="bi bi-envelope-open"></i> Open</button>
+          <button class="btnX" id="closeLetterBtn"><i class="bi bi-x"></i> Close</button>
+        </div>
+      </div>
+
+      <div id="envelope" class="envelope glass-strong p-3 mt-3">
+        <div class="sealed">
+          <div>
+            <div class="fw-semibold" style="font-size: 18px;">Sealed for you</div>
+            <div id="sealedLine" class="mt-1" style="color: var(--muted);">Sealed for you. Open slowly.</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badgeX"><i class="bi bi-heart"></i> Private</span>
+            <button class="btnX btnX-primary" id="openLetterBtn2"><i class="bi bi-envelope-open"></i> Open</button>
+          </div>
+        </div>
+
+        <div class="letterBody">
+          <div id="letterBody" style="max-width: 70ch; line-height: 1.8; color: rgba(18,12,24,0.80);"></div>
+          <hr class="hr-soft my-3" />
+          <div id="letterSig" style="color: rgba(18,12,24,0.72);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories" class="containerX mt-5 mt-md-6">
+      <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+        Memory lane
+      </div>
+      <h2 class="mt-2 font-serif" style="font-size: clamp(28px, 3.5vw, 42px);">Moments that built us</h2>
+      <p class="mt-2 mb-0" style="color: var(--muted); max-width: 70ch;">
+        Simple, specific, and real—so it feels like *your* story.
+      </p>
+
+      <div id="timeline" class="timeline mt-3"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="containerX mt-5 mt-md-6">
+      <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+        Gallery
+      </div>
+      <h2 class="mt-2 font-serif" style="font-size: clamp(28px, 3.5vw, 42px);">Tap-to-reveal captions</h2>
+      <p class="mt-2 mb-0" style="color: var(--muted); max-width: 70ch;">
+        Each photo turns into a mini message. 
+      </p>
+
+      <div id="galleryGrid" class="galleryGrid mt-3"></div>
+    </section>
+
+    <!-- COUPONS + QUIZ -->
+    <section class="containerX mt-5 mt-md-6">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="glass-strong p-4 p-md-5">
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+              Coupon book
+            </div>
+            <h2 class="mt-2 font-serif" style="font-size: clamp(26px, 3vw, 38px);">Redeem anytime</h2>
+            <p class="mt-2 mb-0" style="color: var(--muted);">
+              Little “yeses” you can cash in—no expiry date. 
+            </p>
+
+            <div id="couponGrid" class="d-grid gap-3 mt-4"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="glass-strong p-4 p-md-5">
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+              Compatibility quiz
+            </div>
+            <h2 class="mt-2 font-serif" style="font-size: clamp(26px, 3vw, 38px);">5 quick questions</h2>
+            <p class="mt-2 mb-0" style="color: var(--muted);">
+              Ends with a cute result like “98% unstoppable.”
+            </p>
+
+            <div id="quizWrap" class="d-grid gap-3 mt-4"></div>
+
+            <button id="quizBtn" class="btnX btnX-primary mt-3 w-100">
+              <i class="bi bi-stars"></i> Get result
+            </button>
+
+            <div id="quizResult" class="glass resultBox">
+              <div class="fw-semibold">Your result:</div>
+              <div id="quizResultText" class="mt-1" style="color: rgba(18,12,24,0.82);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="containerX mt-5 mt-md-6">
+      <div class="glass-strong p-4 p-md-5">
+        <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+          Final
+        </div>
+        <h2 class="mt-2 font-serif" style="font-size: clamp(32px, 4vw, 50px);">
+          Will you be my Valentine?
+        </h2>
+        <p class="mt-2 mb-0" style="color: var(--muted); max-width: 70ch;">
+          The next page is a private video message—locked on purpose.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a class="btnX btnX-primary" href="index.html?unlock=1">
+            <i class="bi bi-heart-fill"></i> Yes, my Valentine
+          </a>
+          <button class="btnX" type="button" onclick="alert('Okay. But I’ll ask again… softly.')">
+            Not today
+          </button>
+          <a class="btnX btnX-soft" href="#" id="goRevealBtn2">
+            <i class="bi bi-lock"></i> Reveal
+          </a>
+        </div>
+
+        <hr class="hr-soft my-4" />
+
+        <div>
+          <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+            Save this
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <a class="btnX" id="playlistLink" target="_blank" rel="noreferrer">
+              <i class="bi bi-music-note-beamed"></i> Playlist
+            </a>
+            <a class="btnX" id="calendarLink" target="_blank" rel="noreferrer">
+              <i class="bi bi-calendar-heart"></i> Add to calendar
+            </a>
+            <button class="btnX" type="button" onclick="window.print()">
+              <i class="bi bi-download"></i> Save / print
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 footerTiny">
+        <div>Built by Danbury.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Unlock Modal -->
+  <div class="modal fade" id="unlockModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-strong p-2" style="border: 0;">
+        <div class="p-4 p-md-4">
+          <div class="d-flex align-items-start justify-content-between gap-3">
+            <div>
+              <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
+                Private
+              </div>
+              <h3 class="mt-2 font-serif" style="font-size: 28px;">Enter passcode</h3>
+              <p class="mt-2 mb-0" style="color: var(--muted);">
+                Casual privacy—meant for one person. 
+              </p>
+            </div>
+            <button type="button" class="btnX" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+
+          <form id="unlockForm" class="mt-4">
+            <label class="badgeX"><i class="bi bi-key"></i> Passcode</label>
+            <input id="passcode" class="form-control mt-2" placeholder="••••" autocomplete="off"
+              style="border-radius: 18px; border: 1px solid rgba(18,12,24,0.12); background: rgba(255,255,255,0.72); padding: .9rem 1rem;" />
+
+            <div id="unlockError" class="mt-2" style="color: #b4232b; font-weight: 600;"></div>
+
+            <button class="btnX btnX-primary w-100 mt-3" type="submit">
+              <i class="bi bi-arrow-right-circle"></i> Continue
+            </button>
+
+            <div class="mt-3 footerTiny">
+              Tip: anniversary date / inside joke / nickname. 
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/bg.js"></script>
+
+  <script>
+    // sync duplicate ids for display (tiny convenience)
+    document.getElementById("toName2").textContent = document.getElementById("toName").textContent;
+    // wire reveal buttons to same behavior
+    document.getElementById("goRevealBtnTop")?.addEventListener("click", (e)=>document.getElementById("goRevealBtn").click());
+    document.getElementById("goRevealBtn2")?.addEventListener("click", (e)=>document.getElementById("goRevealBtn").click());
+    document.getElementById("openLetterBtn2")?.addEventListener("click", ()=>document.getElementById("openLetterBtn").click());
+  </script>
+</body>
+</html>
