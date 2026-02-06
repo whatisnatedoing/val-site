@@ -53,8 +53,7 @@
     <section class="containerX mt-4 mt-sm-5">
       <div class="row g-4 g-lg-5 align-items-center">
         <!-- Left -->
-        <div class="col-lg-6">
-          <div id="badgeRow" class="d-flex flex-wrap gap-2"></div>
+        <div class="col-lg-6 heroLeft text-center text-lg-start">          <div id="badgeRow" class="d-flex flex-wrap gap-2"></div>
 
           <div class="mt-3" style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
             To <span id="toName2" style="color: rgba(18,12,24,0.86); font-weight:600;"></span>
@@ -69,8 +68,7 @@
             A private mini experience—quiet, modern, and made for one person: you.
           </p>
 
-          <div class="mt-4 d-flex flex-wrap gap-2">
-            <a class="btnX btnX-primary" href="#letter"><i class="bi bi-envelope-open"></i> Open the letter</a>
+          <div class="mt-4 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start btnRow">            <a class="btnX btnX-primary" href="#letter"><i class="bi bi-envelope-open"></i> Open the letter</a>
             <a class="btnX" href="#gallery"><i class="bi bi-images"></i> View gallery</a>
             <a class="btnX btnX-soft" href="#" id="goRevealBtn"><i class="bi bi-lock"></i> Unlock reveal</a>
           </div>
@@ -104,8 +102,7 @@
         </div>
 
         <!-- Right (hero media + floating cards) -->
-        <div class="col-lg-6">
-          <div class="glass-strong p-3 heroMedia">
+        <div class="col-lg-6 heroLeft text-center text-lg-start">          <div class="glass-strong p-3 heroMedia">
             <img src="assets/img/photo1.jpg" alt="Hero photo" />
 
             <div class="floatingCard topRight glass p-3">
@@ -204,8 +201,7 @@
     <!-- COUPONS + QUIZ -->
     <section class="containerX mt-5 mt-md-6">
       <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="glass-strong p-4 p-md-5">
+        <div class="col-lg-6 heroLeft text-center text-lg-start">          <div class="glass-strong p-4 p-md-5">
             <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
               Coupon book
             </div>
@@ -218,8 +214,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="glass-strong p-4 p-md-5">
+        <div class="col-lg-6 heroLeft text-center text-lg-start">          <div class="glass-strong p-4 p-md-5">
             <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color: rgba(18,12,24,0.55);">
               Compatibility quiz
             </div>
@@ -260,9 +255,7 @@
           <a class="btnX btnX-primary" href="index.html?unlock=1">
             <i class="bi bi-heart-fill"></i> Yes, my Valentine
           </a>
-          <button class="btnX" type="button" onclick="alert('Okay. But I’ll ask again… softly.')">
-            Not today
-          </button>
+          <button class="btnX" type="button" id="notTodayBtn">Not today</button>
           <a class="btnX btnX-soft" href="#" id="goRevealBtn2">
             <i class="bi bi-lock"></i> Reveal
           </a>
@@ -288,9 +281,10 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 footerTiny">
+      <div class="footerTiny footerRow mt-4">
         <div>Built by Danbury.</div>
       </div>
+
     </section>
   </main>
 

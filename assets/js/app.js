@@ -2,25 +2,33 @@
 (function () {
   const data = window.VALENTINE_DATA;
 
-  // Notyf (better notifications)
-    const notyf = new Notyf({
+  // Notyf (better notifications)  [web:173]
+  const notyf = new Notyf({
     duration: 2600,
     ripple: true,
-    position: { x: "right", y: "bottom" },
     dismissible: true,
-    types: [
-        { type: "love", background: "#EF6CA1" },   // Sweetheart Pink
-        { type: "warn", background: "#EE8778" },   // Cupid's Blush
-    ],
-    });
 
-    // helpers
-    const toast = {
+    // Not bottom; looks cleaner for “premium” landing pages
+    position: { x: "center", y: "top" },
+
+    types: [
+      { type: "love", background: "rgba(239,108,161,0.95)" }, // sweet
+      { type: "warn", background: "rgba(238,135,120,0.95)" }, // blush
+      { type: "deep", background: "rgba(141,38,47,0.95)" },   // burning
+    ],
+  });
+
+  const toast = {
     ok: (msg) => notyf.success(msg),
     err: (msg) => notyf.error(msg),
     love: (msg) => notyf.open({ type: "love", message: msg }),
     warn: (msg) => notyf.open({ type: "warn", message: msg }),
-    };
+    deep: (msg) => notyf.open({ type: "deep", message: msg }),
+  };
+
+  // Optional: if you ever need to call from HTML
+  window.toast = toast;
+
 
 
   // Helpers
@@ -247,3 +255,6 @@
 });
 
 
+document.querySelector("#notTodayBtn")?.addEventListener("click", () => {
+  toast.warn("Okay. I’ll ask again softly.");
+});

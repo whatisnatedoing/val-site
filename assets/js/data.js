@@ -69,7 +69,7 @@ window.VALENTINE_DATA = {
   },
 
   saveThis: {
-    playlistUrl: "https://open.spotify.com/", // replace if you want
+    playlistUrl: "https://open.spotify.com/playlist/6rDBRY5KKIHfEqQYZ5lbdb?si=bcCvcdvdTemBZT7l6p9IwQ", // replace if you want
     calendarUrl: "https://calendar.google.com/calendar/u/0/r/eventedit", // replace if you want
   },
 
