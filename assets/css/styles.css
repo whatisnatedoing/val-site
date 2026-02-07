@@ -406,3 +406,28 @@ a:hover{opacity:.92}
 .notyf__message{
   text-align: center;
 }
+
+
+/* Reduce height of CLOSED letter card (sealed state) */
+.envelope .sealed{
+  justify-content: flex-start;   /* stops the big vertical spacing effect */
+  padding: .9rem 1rem;           /* was 1.25rem */
+  gap: .45rem .75rem;            /* smaller row/col gaps */
+}
+
+/* Tighten the two text lines a bit */
+.envelope .sealed .fw-semibold{ margin: 0; }
+#sealedLine{ margin-top: .2rem !important; }
+
+/* Optional: if the right-side actions are adding height */
+.envelope .sealed > div:last-child{
+  margin-top: .25rem;            /* keep small separation (or set 0) */
+}
+
+
+@media (max-width: 575.98px){
+  .envelope .sealed{
+    padding: .85rem .9rem;
+    gap: .4rem;
+  }
+}
