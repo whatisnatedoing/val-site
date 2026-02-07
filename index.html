@@ -70,7 +70,7 @@
 
           <div class="mt-4 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start btnRow">            <a class="btnX btnX-primary" href="#letter"><i class="bi bi-envelope-open"></i> Open the letter</a>
             <a class="btnX" href="#gallery"><i class="bi bi-images"></i> View gallery</a>
-            <a class="btnX btnX-soft" href="#" id="goRevealBtn"><i class="bi bi-lock"></i> Unlock reveal</a>
+            <a class="btnX btnX-soft" href="index.html?unlock=1" id="goRevealBtn"><i class="bi bi-lock"></i> Unlock reveal</a>
           </div>
 
           <p id="revealHint" class="mt-3 mb-0" style="font-size: 13px; color: rgba(18,12,24,0.55);">
@@ -79,26 +79,6 @@
 
           <hr class="hr-soft mt-4 mb-0" />
 
-          <div class="row g-3 mt-1">
-            <div class="col-sm-4">
-              <div class="glass p-3">
-                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Tone</div>
-                <div class="mt-2" style="color: var(--muted);">Soft · modern · romantic</div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="glass p-3">
-                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Story</div>
-                <div class="mt-2" style="color: var(--muted);">One scroll · one person</div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="glass p-3">
-                <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Reveal</div>
-                <div class="mt-2" style="color: var(--muted);">Video message</div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Right (hero media + floating cards) -->
@@ -121,13 +101,6 @@
               <div class="mt-2" style="color: rgba(18,12,24,0.82);">
                 Passcode needed for the reveal.
               </div>
-            </div>
-          </div>
-
-          <div class="mt-3 glass p-3 d-lg-none">
-            <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color: rgba(18,12,24,0.55);">Tip</div>
-            <div class="mt-2" style="color: rgba(18,12,24,0.82);">
-              Replace the 6 photos in <code>assets/img</code> so it feels like *you two*.
             </div>
           </div>
         </div>
@@ -179,7 +152,7 @@
       </div>
       <h2 class="mt-2 font-serif" style="font-size: clamp(28px, 3.5vw, 42px);">Moments that built us</h2>
       <p class="mt-2 mb-0" style="color: var(--muted); max-width: 70ch;">
-        Simple, specific, and real—so it feels like *your* story.
+        Simple, specific, and real, so it feels like *your* story.
       </p>
 
       <div id="timeline" class="timeline mt-3"></div>
@@ -219,9 +192,6 @@
               Compatibility quiz
             </div>
             <h2 class="mt-2 font-serif" style="font-size: clamp(26px, 3vw, 38px);">5 quick questions</h2>
-            <p class="mt-2 mb-0" style="color: var(--muted);">
-              Ends with a cute result like “98% unstoppable.”
-            </p>
 
             <div id="quizWrap" class="d-grid gap-3 mt-4"></div>
 
@@ -252,13 +222,10 @@
         </p>
 
         <div class="d-flex flex-wrap gap-2 mt-4">
-          <a class="btnX btnX-primary" href="index.html?unlock=1">
+          <a class="btnX btnX-soft" href="index.html?unlock=1">
             <i class="bi bi-heart-fill"></i> Yes, my Valentine
           </a>
           <button class="btnX" type="button" id="notTodayBtn">Not today</button>
-          <a class="btnX btnX-soft" href="#" id="goRevealBtn2">
-            <i class="bi bi-lock"></i> Reveal
-          </a>
         </div>
 
         <hr class="hr-soft my-4" />
@@ -300,7 +267,7 @@
               </div>
               <h3 class="mt-2 font-serif" style="font-size: 28px;">Enter passcode</h3>
               <p class="mt-2 mb-0" style="color: var(--muted);">
-                Casual privacy—meant for one person. 
+                Casual privacy, meant for one person. 
               </p>
             </div>
             <button type="button" class="btnX" data-bs-dismiss="modal" aria-label="Close">
