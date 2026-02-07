@@ -7,16 +7,14 @@
     duration: 2600,
     ripple: true,
     dismissible: true,
-
-    // Not bottom; looks cleaner for “premium” landing pages
-    position: { x: "center", y: "top" },
-
+    position: { x: "center", y: "center" }, // true middle [web:178]
     types: [
-      { type: "love", background: "rgba(239,108,161,0.95)" }, // sweet
-      { type: "warn", background: "rgba(238,135,120,0.95)" }, // blush
-      { type: "deep", background: "rgba(141,38,47,0.95)" },   // burning
+      { type: "love", background: "#EF6CA1" },
+      { type: "warn", background: "#EE8778" },
+      { type: "deep", background: "#8D262F" },
     ],
   });
+
 
   const toast = {
     ok: (msg) => notyf.success(msg),

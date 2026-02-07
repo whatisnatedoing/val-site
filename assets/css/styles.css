@@ -317,3 +317,92 @@ a:hover{opacity:.92}
   padding-top: 20px;
 }
 
+
+
+/* ===== Letter section: sealed state layout fix ===== */
+
+/* Make sealed header wrap nicely instead of cramming */
+.envelope .sealed{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1rem;
+}
+
+/* Left text block should be allowed to shrink/wrap */
+.envelope .sealed > div:first-child{
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+/* Title + subline wrap nicely */
+.envelope .sealed .fw-semibold{
+  line-height: 1.2;
+}
+#sealedLine{
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Right actions (Private badge + Open button) should wrap */
+.envelope .sealed > div:last-child{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+  flex: 0 0 auto;
+}
+
+/* Mobile: stack everything inside the sealed card cleanly */
+@media (max-width: 575.98px){
+  .envelope .sealed{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .envelope .sealed > div:last-child{
+    justify-content: center;
+  }
+
+  /* Make badge + button fit the card width without ugly overflow */
+  .envelope .sealed .badgeX{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .envelope .sealed .btnX{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ===== Notyf: centered compact box (not full-width) ===== */
+
+.notyf{
+  /* hard-center container */
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+
+  /* stop it from stretching across the screen */
+  width: auto !important;
+  max-width: calc(100vw - 2rem) !important;
+}
+
+/* The toast itself should be a small “popup box” */
+.notyf__toast{
+  width: auto !important;
+  max-width: 340px !important;
+  margin: 0 auto !important;
+}
+
+/* Center the text so it reads like a popup */
+.notyf__message{
+  text-align: center;
+}
